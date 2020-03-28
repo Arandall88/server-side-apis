@@ -22,19 +22,19 @@
         let fahrenheit = Math.floor(celsius * (9/5) + 32); */
     });
     function uvIndex(lat,lon){
-        $.get("http://api.openweathermap.org/data/2.5/uvi?lat="+lat+"&lon="+ lon+"&appid=3b95a3fec983ab519a29476d2ec88e12", function(data) {
+        $.get("https://api.openweathermap.org/data/2.5/uvi?lat="+lat+"&lon="+ lon+"&appid=3b95a3fec983ab519a29476d2ec88e12", function(data) {
             console.log(data.value);
             $("#index").html("Uv Index: " + data.value  );
         });
     }
     /* api added to call weather by city */
     function getWeather(city){
-        $.get("http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=imperial&appid=3b95a3fec983ab519a29476d2ec88e12", function(data){
+        $.get("https://api.openweathermap.org/data/2.5/weather?q="+city+"&units=imperial&appid=3b95a3fec983ab519a29476d2ec88e12", function(data){
           console.log(data);
     
             $("#city").html(data.name);
             $("#description").html(data.weather[0].description);
-            $("#icon").html("<img src='http://openweathermap.org/img/w/" + data.weather[0].icon + ".png'>");
+            $("#icon").html("<img src='https://openweathermap.org/img/w/" + data.weather[0].icon + ".png'>");
             $("#temp").html("Temperatue: " + data.main.temp + " °F");
             $("#humidity").html("Humidity: " + data.main.humidity + "%");
             $("#speed").html("Wind Speed: " + data.wind.speed + " mph");
@@ -45,14 +45,14 @@
         var li = $("<li>").text(city);
         $("#search").append(li);
         /* api added to call 5-day forecast */
-        $.get("http://api.openweathermap.org/data/2.5/forecast?q="+city+"&units=imperial&appid=3b95a3fec983ab519a29476d2ec88e12", function(data){
+        $.get("https://api.openweathermap.org/data/2.5/forecast?q="+city+"&units=imperial&appid=3b95a3fec983ab519a29476d2ec88e12", function(data){
         console.log(data);
     
     /* adding variables for moment .js, and api to display each day of 5-day forecast date, icon, temp, and humidity */
     /* DAY ONE */
       var dayOne = moment().format("M/D/YYYY");
       var dayOneIcon = data.list[0].weather[0].icon;
-      var dayOneImage = "http://openweathermap.org/img/w/" + dayOneIcon + ".png";
+      var dayOneImage = "https://openweathermap.org/img/w/" + dayOneIcon + ".png";
       var dayOneImageSrc = $("<img>").attr("src", dayOneImage);
       var dayOneTemp = data.list[0].main.temp + " °F";
       var dayOneTempFar = (dayOneTemp - 273.15) * 1.8 + 32;
@@ -73,7 +73,7 @@
     /* DAY TWO */
       var dayTwo = moment().add(1, "days").format("M/D/YYYY");
       var dayTwoIcon = data.list[8].weather[0].icon;
-      var dayTwoImage = "http://openweathermap.org/img/wn/" + dayTwoIcon + ".png";
+      var dayTwoImage = "https://openweathermap.org/img/wn/" + dayTwoIcon + ".png";
       var dayTwoImageSrc = $("<img>").attr("src", dayTwoImage);
       var dayTwoTemp = data.list[8].main.temp + " °F";
       var dayTwoTempFar = (dayTwoTemp - 273.15) * 1.8 + 32;
@@ -94,7 +94,7 @@
     /* DAY THREE */
       var dayThree = moment().add(2, "days").format("M/D/YYYY");
       var dayThreeIcon = data.list[16].weather[0].icon;
-      var dayThreeImage = "http://openweathermap.org/img/wn/" + dayThreeIcon + ".png";
+      var dayThreeImage = "https://openweathermap.org/img/wn/" + dayThreeIcon + ".png";
       var dayThreeImageSrc = $("<img>").attr("src", dayThreeImage);
       var dayThreeTemp = data.list[16].main.temp + " °F";
       var dayThreeTempFar = (dayThreeTemp - 273.15) * 1.8 + 32;
@@ -115,7 +115,7 @@
     /* DAY FOUR */
       var dayFour = moment().add(3, "days").format("M/D/YYYY");
       var dayFourIcon = data.list[24].weather[0].icon;
-      var dayFourImage = "http://openweathermap.org/img/wn/" + dayFourIcon + ".png";
+      var dayFourImage = "https://openweathermap.org/img/wn/" + dayFourIcon + ".png";
       var dayFourImageSrc = $("<img>").attr("src", dayFourImage);
       var dayFourTemp = data.list[24].main.temp + " °F";
       var dayFourTempFar = (dayFourTemp - 273.15) * 1.8 + 32;
@@ -136,7 +136,7 @@
     /* DAY FIVE */
       var dayFive = moment().add(4, "days").format("M/D/YYYY");
       var dayFiveIcon = data.list[32].weather[0].icon;
-      var dayFiveImage = "http://openweathermap.org/img/wn/" + dayFiveIcon + ".png";
+      var dayFiveImage = "https://openweathermap.org/img/wn/" + dayFiveIcon + ".png";
       var dayFiveImageSrc = $("<img>").attr("src", dayFiveImage);
       var dayFiveTemp = data.list[32].main.temp + " °F";
       var dayFiveTempFar = (dayFiveTemp - 273.15) * 1.8 + 32;
