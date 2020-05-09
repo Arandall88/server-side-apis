@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
     
 <head>
-    <!-- my original code before the fork -->
+    <!-- my original code before the fork
     <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,22 +21,40 @@
     <!-- Added moment.js for time/date referrence/functionality-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     
-    <title>Weather Dashboard</title>
+    <title>WeatherView</title>
+
+        
 </head>
+<header>
+    <nav class="navbar navbar-light bg-light justify-content-between">
+  <a class="navbar-brand"><strong>WeatherView</strong></a>
+  <form class="form-inline">
+  </form>
+</nav>
+</header>
+
 <body>
+    <div class="item sky-bg-img" style="background: url(/background.jpg);"></div>
+    <div class="box">
+
+    </div>
+    
     <!-- NAVBAR using Bootstrap Components -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+        <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
             <div class="container">
-                <a class="navbar-brand" href="#weather-text">WEATHER DASHBOARD</a>
+                                    <img src="images/backgroundweather.jpg" class="img-thumbnail" alt="Thumbnail Image">
+
+            
             </div>
         </nav>
-
+           
+                
     <!-- LAYOUT using Bootstrap Grid-System -->   
     <div class="container">
         <!-- Rows (!! Up to 12 units !!) added for City Search, Current Weather Conditions, and 5-Day Forecast -->
         <div class="row">
             <div class="col-3 bg-city">
-                <h4>Search by City</h4>
+                <h4><em>Search by City</em></h4>
                 <!-- div form to input city -->
                 <form id="city-form">
                     <div><input type="text" id="city-name"></div>
@@ -44,7 +62,7 @@
                 </form>
                 <!-- input form to display Recent Searches in localStorage -->
                 <ul class="nav flex-column" id="search">
-                    <li class="nav-item">Recent Searches</li>
+                    <li class="nav-item"><em>Recent Searches</em></li>
                     <input type="text" class="form-control" id="" placeholder="">
                 </ul>
                 <!-- added Clear All button to clear user input/add functionality -->
@@ -56,7 +74,7 @@
         <!-- div container that stores current weather conditions for getWeather(city); function in script.js -->
         <div class="container-fluid">
             <div class="col-9 weather-conditions">
-                <h4>Current Weather Conditions</h4>
+                <h4><em>Current Weather Conditions</em></h4>
                 <div id="city"></div>
                 <div id="date"></div>
                 <div id="description"></div>
@@ -71,7 +89,7 @@
        <!-- Need to add functionality -->
         <div class="container-fluid">
             <h4>
-                5-Day Forecast:
+                <em>5-Day Forecast:</em>
             </h4>
             <div class="row">
                 <div class="card text-white bg-primary mb-3" style="max-width: 9rem;">
@@ -124,4 +142,4 @@
 
      </script>            
 </body>
-</html>  
+</html>   -->

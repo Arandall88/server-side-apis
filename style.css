@@ -1,17 +1,28 @@
+/* .box {
+ background-image: url("../server-side-apis/images/backgroundweather.jpg;");
+ /* background-color: #cccccc; */
+body {
+  /* Typography */
+  font-size: 18px;
+  line-height: 27px;
+
+  /* Visual */
+  background-color: url("../server-side-apis/images/backgroundweather.jpg");
+}
+
+
+ .container{
+     background-color: blue;
+ }
 .navbar-brand {
     font-size: 30px;
     font-weight: 2px;
  }
  
  .a {
+
      text-align: center;
  }
- 
- .bg-city {
-     background-color: whitesmoke;
-     padding: 10px;
- }
- 
  .nav-item {
      font-size: 20px;
      margin-top: 10px;
@@ -23,11 +34,11 @@
      margin-top: 10px;
      margin-bottom: 20px;
      padding: 10px;
-     border: 1px solid grey;
+     border: 1px solid rgb(128, 128, 128);
  }
  
  .forecast {
-     background-color: lightgrey;
+     background-color: rgba(211, 211, 211, 0.514);
      margin-top: 10px;
  }
  
