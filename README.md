@@ -1,3 +1,6 @@
+![good-weather](https://user-images.githubusercontent.com/59499644/81461071-fde08000-916e-11ea-8dd1-27545153724b.jpg)
+
+
 <!-- # server-side-apis
 GIVEN a weather dashboard with form inputs
 WHEN I search for a city
@@ -12,5 +15,4 @@ WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 WHEN I open the weather dashboard
 THEN I am presented with the last searched city forecast
-``` -->
-<!-- code source https://github.com/tshivers/weather-dashboard.git -->
+```
