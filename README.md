@@ -1,7 +1,7 @@
 ![good-weather](https://user-images.githubusercontent.com/59499644/81461071-fde08000-916e-11ea-8dd1-27545153724b.jpg)
 
 
-<!-- # server-side-apis
+# WeatherView
 GIVEN a weather dashboard with form inputs
 WHEN I search for a city
 THEN I am presented with current and future conditions for that city and that city is added to the search history
